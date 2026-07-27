@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends libpq-dev gcc \
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
+RUN opentelemetry-bootstrap -a install
 
 COPY . .
 
@@ -15,5 +16,5 @@ COPY . .
 RUN addgroup --system appgroup && adduser --system --group appuser
 USER appuser
 
-EXPOSE 5000
-CMD ["python", "app.py"]
+EXPOSE 8081
+CMD ["opentelemetry-instrument", "python", "app.py"]
