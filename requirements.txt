@@ -1,4 +1,8 @@
-Flask==2.2.2
+Flask>=2.3.0
 psycopg2-binary==2.9.5
 gunicorn==20.1.0
-python-dotenv==0.21.0prometheus_flask_exporter==0.23.0\nopentelemetry-distro==0.45b0\nopentelemetry-instrumentation-flask==0.45b0\nopentelemetry-exporter-otlp==1.24.0
+python-dotenv==0.21.0
+prometheus_flask_exporter==0.23.0
+opentelemetry-distro==0.45b0
+opentelemetry-instrumentation-flask==0.45b0
+opentelemetry-exporter-otlp==1.24.0
